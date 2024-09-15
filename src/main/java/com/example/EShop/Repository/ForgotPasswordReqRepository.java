@@ -1,8 +1,9 @@
-package com.example.EShopping.Repository;
+package com.example.EShop.Repository;
 
 
-import com.example.EShopping.Exception.*;
-import com.example.EShopping.Model.*;
+import com.example.EShop.Model.ForgotPasswordRequest;
+import com.example.EShop.Exception.*;
+import com.example.EShop.Model.*;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

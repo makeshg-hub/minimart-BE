@@ -1,6 +1,7 @@
-package com.example.EShopping.Repository;
+package com.example.EShop.Repository;
 
-import com.example.EShopping.Model.*;
+import com.example.EShop.Model.User;
+import com.example.EShop.Model.*;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

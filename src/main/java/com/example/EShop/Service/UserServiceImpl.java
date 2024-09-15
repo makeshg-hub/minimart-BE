@@ -1,10 +1,12 @@
-package com.example.EShopping.Service;
+package com.example.EShop.Service;
 
-import com.example.EShopping.Exception.*;
-import com.example.EShopping.Model.*;
-import com.example.EShopping.Repository.ForgotPasswordReqRepository;
-import com.example.EShopping.Repository.OTPRepository;
-import com.example.EShopping.Repository.UserRepository;
+import com.example.EShop.Exception.*;
+import com.example.EShop.Model.*;
+import com.example.EShop.Exception.*;
+import com.example.EShop.Model.*;
+import com.example.EShop.Repository.ForgotPasswordReqRepository;
+import com.example.EShop.Repository.OTPRepository;
+import com.example.EShop.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.mongodb.core.MongoTemplate;
 import org.springframework.scheduling.annotation.Scheduled;

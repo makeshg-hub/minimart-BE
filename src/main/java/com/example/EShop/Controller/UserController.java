@@ -1,15 +1,16 @@
-package com.example.EShopping.Controller;
+package com.example.EShop.Controller;
 
-import com.example.EShopping.Service.UserService;
+import com.example.EShop.Exception.*;
+import com.example.EShop.Model.*;
+import com.example.EShop.Repository.OTPRepository;
+import com.example.EShop.Service.EmailService;
+import com.example.EShop.Service.PasswordEncryptDecryptServiceImpl;
+import com.example.EShop.Service.UserService;
 import jakarta.validation.Valid;
-import com.example.EShopping.Exception.*;
+import com.example.EShop.Exception.*;
 
-import com.example.EShopping.Model.*;
-import com.example.EShopping.Repository.ForgotPasswordReqRepository;
-import com.example.EShopping.Repository.OTPRepository;
-import com.example.EShopping.Service.EmailService;
-import com.example.EShopping.Service.PasswordEncryptDecryptServiceImpl;
-import com.example.EShopping.Service.UserService;
+import com.example.EShop.Model.*;
+import com.example.EShop.Repository.ForgotPasswordReqRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

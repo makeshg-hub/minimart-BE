@@ -1,6 +1,6 @@
-package com.example.EShopping.Service;
+package com.example.EShop.Service;
 
-import com.example.EShopping.Model.User;
+import com.example.EShop.Model.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,7 +1,8 @@
-package com.example.EShopping.Service;
+package com.example.EShop.Service;
 
 
-import com.example.EShopping.Model.*;
+import com.example.EShop.Model.*;
+import com.example.EShop.Model.*;
 
 public interface UserService {
     void newUser(User user);

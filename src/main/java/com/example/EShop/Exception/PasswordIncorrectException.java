@@ -1,4 +1,4 @@
-package com.example.EShopping.Exception;
+package com.example.EShop.Exception;
 
 public class PasswordIncorrectException extends RuntimeException {
 

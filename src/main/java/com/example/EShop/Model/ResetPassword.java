@@ -1,4 +1,4 @@
-package com.example.EShopping.Model;
+package com.example.EShop.Model;
 
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;

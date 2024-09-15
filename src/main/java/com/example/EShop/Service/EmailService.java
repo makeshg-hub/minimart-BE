@@ -1,10 +1,13 @@
-package com.example.EShopping.Service;
+package com.example.EShop.Service;
 
+import com.example.EShop.Model.ForgotPasswordRequest;
+import com.example.EShop.Model.ForgotRequest;
+import com.example.EShop.Model.User;
 import freemarker.template.Configuration;
 import freemarker.template.TemplateException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
-import com.example.EShopping.Model.*;
+import com.example.EShop.Model.*;
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
@@ -31,7 +34,7 @@ public class EmailService {
         helper.setTo(user.getEmail());
         String emailContent = EmailTemplate.getRegistrationSuccessTemplate(user);
         helper.setText(emailContent, true);
-        FileSystemResource res = new FileSystemResource(new File("src/main/resources/static/images/logo.png"));
+        FileSystemResource res = new FileSystemResource(new File("src/main/resources/images/logo.png"));
         helper.addInline("logoImage", res);
         javaMailSender.send(mimeMessage);
     }

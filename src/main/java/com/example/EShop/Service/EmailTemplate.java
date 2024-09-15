@@ -1,8 +1,9 @@
-package com.example.EShopping.Service;
+package com.example.EShop.Service;
 
 
-import com.example.EShopping.Exception.*;
-import com.example.EShopping.Model.*;
+import com.example.EShop.Model.User;
+import com.example.EShop.Exception.*;
+import com.example.EShop.Model.*;
 
 public class EmailTemplate {
 

@@ -16,9 +16,6 @@ public class ForgotPasswordRequest {
     @NotEmpty(message = "EmailId is mandatory")
     private transient String email;
 
-    @NotEmpty(message = "userName is mandatory")
-    private String userName;
-
     @JsonIgnore
     private String token;
 

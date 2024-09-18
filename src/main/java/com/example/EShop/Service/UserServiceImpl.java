@@ -99,10 +99,8 @@ public class UserServiceImpl implements UserService{
         if (!reg.isPresent()){
             throw new UserNotFoundException("Email Id "+forgotRequest.getEmail()+" not found, Please provide the valid email");
         }
-        User user = userRepository.findByUserName(forgotRequest.getUserName());
-        if (Objects.isNull(user)){
-            throw new PasswordInValidException("User Name "+forgotRequest.getUserName()+" not found, Please provide the valid user name.");
-        }
+        User user = userRepository.findByEmail(forgotRequest.getEmail());
+
         ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
         LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
 

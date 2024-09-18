@@ -108,11 +108,8 @@ public class UserController {
             forgotRequest = userService.forgotPassword(forgotRequest);
             emailService.sendPassword(forgotRequest);
         }
-        catch(UserNotFoundException e){
-            return new ResponseEntity<>("Email Id "+forgotRequest.getEmail()+" not found, Please provide the valid email.",HttpStatus.NOT_FOUND);
-        }
-        catch (PasswordInValidException e){
-            return new ResponseEntity<>("User Name "+forgotRequest.getUserName()+" not found, Please provide the valid user name.",HttpStatus.NOT_FOUND);
+        catch(UserNotFoundException e) {
+            return new ResponseEntity<>("Email Id " + forgotRequest.getEmail() + " not found, Please provide the valid email.", HttpStatus.NOT_FOUND);
         }
         return new ResponseEntity<>("Password Reset Link has been sent successfully", HttpStatus.OK);
     }

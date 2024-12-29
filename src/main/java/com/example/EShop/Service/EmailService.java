@@ -60,7 +60,7 @@ public class EmailService {
         helper.setTo(forgotRequest.getEmail());
         String content = EmailTemplate.getForgotPassTemplate(forgotRequest.getToken());
         helper.setText(content, true);
-        FileSystemResource res = new FileSystemResource(new File("src/main/resources/static/images/logo.png"));
+        FileSystemResource res = new FileSystemResource(new File("src/main/resources/images/logo.png"));
         helper.addInline("logoImage", res);
         javaMailSender.send(mimeMessage);
     }

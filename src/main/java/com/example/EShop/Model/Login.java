@@ -5,10 +5,11 @@ import lombok.Data;
 
 @Data
 public class Login {
-    @NotEmpty(message = "userName is mandatory")
-    private String userName;
+    @NotEmpty(message = "Email is mandatory")
+    private String email;
 
     @NotEmpty(message = "Password is mandatory")
     private String password;
-    
-}
+
+    }
+

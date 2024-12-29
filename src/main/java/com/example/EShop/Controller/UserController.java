@@ -61,20 +61,18 @@ public class UserController {
     public ResponseEntity loginUser(@Valid @RequestBody Login lo) throws Exception {
         User user;
         try {
-            OTP otp = new OTP();
-            user = userService.userLogin(lo, otp);
-            emailService.sendOTPEmail(user, otp.getOtp());
+            user = userService.userLogin(lo);
 
         }
         catch (UserNotFoundException e){
-            return new ResponseEntity<>("Please Provide a Valid User name",HttpStatus.NOT_FOUND);
+            return new ResponseEntity<>("Please Provide a Valid Email",HttpStatus.NOT_FOUND);
         }catch (PasswordIncorrectException e){
             return new ResponseEntity<>("Password is incorrect. Please give correct password or reset your password by clicking forgot password",HttpStatus.NOT_FOUND);
         }
         catch (Exception e){
             return new ResponseEntity<>("Invalid data", HttpStatus.BAD_REQUEST);
         }
-        return new ResponseEntity<>("OTP sent Successfully",HttpStatus.OK);
+        return new ResponseEntity<>("Login Successful",HttpStatus.OK);
     }
 
     @PostMapping("/verify-otp")

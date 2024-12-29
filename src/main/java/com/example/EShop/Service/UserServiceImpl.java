@@ -61,26 +61,26 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
-    public User userLogin(Login login, OTP otp) {
-        User user = userRepository.findByUserName(login.getUserName());
+    public User userLogin(Login login) {
+        User user = userRepository.findByEmail(login.getEmail());
         if(Objects.isNull(user)) {
-            throw new UserNotFoundException("Username "+login.getUserName()+" please provide the valid user name or Please sign-up and try to login");
+            throw new UserNotFoundException("Email "+login.getEmail()+" please provide the valid user name or Please sign-up and try to login");
         }
         String password=passwordEncryptDecryptService.passwordDecryption(user.getPassword());
         if(!password.equals(login.getPassword())) {
             throw new PasswordIncorrectException("Password is incorrect. Please give correct password or reset your password by clicking forgot password");
         }
-        otp.setOtp(getOTP());
-        otp.setUserName(user.getUserName());
+//        otp.setOtp(getOTP());
+//        otp.setUserName(user.getUserName());
 
-        List<OTP> userExist = otpRepository.findByUserName(user.getUserName());
-        if(userExist.size() > 0){
-            otpRepository.deleteByUserName(user.getUserName());
-        }
-        ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
-        LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
-        otp.setCreatedAt(String.valueOf(localDateTime));
-        otpRepository.save(otp);
+//        List<OTP> userExist = otpRepository.findByUserName(user.getUserName());
+//        if(userExist.size() > 0){
+//            otpRepository.deleteByUserName(user.getUserName());
+//        }
+//        ZonedDateTime zonedDateTime = ZonedDateTime.now(ZoneId.of("Asia/Kolkata"));
+//        LocalDateTime localDateTime = zonedDateTime.toLocalDateTime();
+//        otp.setCreatedAt(String.valueOf(localDateTime));
+//        otpRepository.save(otp);
         return user;
     }
 

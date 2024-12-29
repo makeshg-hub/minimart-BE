@@ -7,7 +7,7 @@ import com.example.EShop.Model.*;
 public interface UserService {
     void newUser(User user);
 
-    User userLogin(Login login, OTP otp);
+    User userLogin(Login login);
 
     User forgotUserName(ForgotRequest forgotRequest);
 

@@ -20,7 +20,7 @@ import java.time.LocalDateTime;
 
 
 @RestController
-@RequestMapping("/api/patient")
+@RequestMapping("/api/cart")
 @CrossOrigin(origins = "http://localhost:3000")
 public class UserController {
 

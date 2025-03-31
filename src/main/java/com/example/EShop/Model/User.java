@@ -12,7 +12,7 @@ import java.util.UUID;
 
 
 @Data
-@Document(collection = "User")
+@Document(collection = "user")
 public class User {
     @Id
     @JsonIgnore
